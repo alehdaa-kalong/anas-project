@@ -1,0 +1,102 @@
+{
+    "sections": [
+        {
+            "title": "Soups",
+            "subcategories": [
+                {
+                    "name": "Seafood",
+                    "items": [
+                        {
+                            "title": "Oyster Soup",
+                            "imgPath": "oyster-soup.jpeg"
+                        },
+                        {
+                            "title": "Sea Dates Soup",
+                            "imgPath": "sea-dates-soup.jpeg"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Appetizers",
+            "subcategories": [
+                {
+                    "name": "Mixed",
+                    "items": [
+                        {
+                            "title": "Mixed Appetizers",
+                            "imgPath": "mixed-appetizers.jpeg"
+                        },
+                        {
+                            "title": "Shrimp Salad",
+                            "imgPath": "shrimp-salad.jpeg"
+                        },
+                        {
+                            "title": "Mutabbal - Baba Ghanoush",
+                            "imgPath": "baba-ghanoush.jpeg"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Seafood",
+            "subcategories": [
+                {
+                    "name": "Shrimp",
+                    "items": [
+                        {
+                            "title": "Grilled Jumbo Shrimp",
+                            "imgPath": "grilled-jumbo-shrimp.jpeg"
+                        },
+                        {
+                            "title": "Fried Jumbo Shrimp",
+                            "imgPath": "fried-jumbo-shrimp.jpeg"
+                        },
+                        {
+                            "title": "Fried Shrimp",
+                            "imgPath": "fried-shrimp.jpeg"
+                        }
+                    ]
+                },
+                {
+                    "name": "Crab",
+                    "items": [
+                        {
+                            "title": "Crab with Bechamel",
+                            "imgPath": "crab-bechamel.jpeg"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Main Dishes",
+            "subcategories": [
+                {
+                    "name": "Fish",
+                    "items": [
+                        {
+                            "title": "Grilled Fish",
+                            "imgPath": "grilled-fish.jpeg"
+                        }
+                    ]
+                },
+                {
+                    "name": "Rice",
+                    "items": [
+                        {
+                            "title": "White Rice",
+                            "imgPath": "white-rice.webp"
+                        },
+                        {
+                            "title": "Sayyadiyah Rice",
+                            "imgPath": "sayyadiyah-rice.jpeg"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+:root{
+     --primary-color:#4E9DD5;
+     --secondary-color: #FFF8ED;
+     --accent-color: #000000;
+     --background-color: #FFF8ED;
+}
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('@/assets/fonts/KLORE_DEMO.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html{
+     scroll-behavior: smooth;
+}
+*{
+     margin: 0;
+     padding: 0;
+}
+a{
+     text-decoration: none;
+}
+body {
+     margin: 0;
+     font-family: 'MyCustomFont', sans-serif !important;
+     background-color: var(--primary-color);
+     overflow-x: hidden;
+}

@@ -1,34 +1,34 @@
 <template>
-    <div class="main">
-        <div class="background-design" :style="{ backgroundImage: `url(${backgroundImage})` }"></div>
+    <section class="main">
+        <section class="background-design" :style="{ backgroundImage: `url(${backgroundImage})` }"></section>
 
-        <div class="main-text">
-            <div class="main-body">
+        <section class="main-text">
+            <section class="main-body">
                 <p><span class="yellow">Our menu </span>____________</p>
                 <p class="main-2">
                     Discover <br />
                     Our Menu
                 </p>
-            </div>
+            </section>
 
             <!-- Dynamically loop through sections (Starters, Main Course, Desserts) -->
-            <div v-for="section in menuData" :key="section.title">
+            <section v-for="section in menuData" :key="section.title">
                 <h2>{{ section.title }}</h2>
 
                 <!-- Dynamically loop through subcategories (Veg / Non-Veg) -->
-                <div v-for="sub in section.subcategories" :key="sub.name">
+                <section v-for="sub in section.subcategories" :key="sub.name">
                     <h3 v-if="sub.name">{{ sub.name }}</h3>
 
                     <!-- Dynamically loop through the menu cards -->
-                    <div class="menu-grid">
+                    <section class="menu-grid">
                         <!-- Wrapped item.imgPath in the getImageUrl function -->
                         <MenuCard v-for="item in sub.items" :key="item.title" :imgPath="getImageUrl(item.imgPath)"
                             :imgTitle="item.title" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
     <Footer />
 </template>
 

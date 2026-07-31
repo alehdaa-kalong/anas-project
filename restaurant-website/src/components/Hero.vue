@@ -1,21 +1,21 @@
 <template>
-    <div class="main" id="home">
-      <div class="background-des">
+    <section class="main" id="home">
+      <section class="background-des">
         <img src="@/assets/images/new_background.png" alt="design" />
-      </div>
-      <div class="container">
-        <div class="text-container">
+      </section>
+      <section class="container">
+        <section class="text-container">
           <p>Taste the authentic Thai cuisine</p>
-        </div>
-        <div class="image-container">
+        </section>
+        <section class="image-container">
           <img src="@/assets/images/thai-food.jpg" alt="Image" />
           <h1>
             Taste the Tradition,<br />
             Love the Flavors...
           </h1>
-        </div>
-      </div>
-    </div>
+        </section>
+      </section>
+    </section>
 </template>
 
 <script setup>

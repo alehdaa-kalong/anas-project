@@ -1,20 +1,20 @@
 <template>
-    <div v-if="isVisible" class="modal-overlay" @click="closeAd">
-        <div class="modal-content" @click.stop>
+    <section v-if="isVisible" class="modal-overlay" @click="closeAd">
+        <section class="modal-content" @click.stop>
             <button class="close-btn" @click="closeAd">&times;</button>
 
             <!-- Ad Content -->
-            <div class="ad-body">
-                <div class="image-container">
-                    <img src="/src/assets/images/Ad/AdPoster.png" alt="Special Offer" class="poster-img" />
-                </div>
-                <div class="ad-text">
+            <section class="ad-body">
+                <section class="image-container">
+                    <img src="/src/assets/images/Ad/AdPoster.jpg" alt="Special Offer" class="poster-img" />
+                </section>
+                <section class="ad-text">
                     <h2>Special Offer!</h2>
                     <button class="promo-book-btn" @click="goToBooking">Book a Table Now</button>
-                </div>
-            </div>
-        </div>
-    </div>
+                </section>
+            </section>
+        </section>
+    </section>
 </template>
 
 <script setup>

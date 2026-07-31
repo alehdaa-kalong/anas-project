@@ -1,21 +1,21 @@
 <script setup>
 import Grid from '@/components/Grid.vue'
 import gridImg1 from '@/assets/images/grid-img1.jpg'
-import gridImg2 from '@/assets/images/grid-img2.png'
-import gridImg3 from '@/assets/images/grid-img3.png'
+import gridImg2 from '@/assets/images/grid-img2.jpg'
+import gridImg3 from '@/assets/images/grid-img3.jpg'
 </script>
 
 <template>
-     <div class="about">
-          <div class="about-grid">
+     <section class="about">
+          <section class="about-grid">
                <Grid :image="gridImg1"
                     text="Welcome to Siam Isle – Krabi's coastal gem, where the flavors of the Andaman Sea meet the soul of Thai cuisine." />
                <Grid :image="gridImg2"
                     text="Our chefs honor the kingdom’s ancient recipes while adding subtle modern touches, celebrating the balance of hot, sour, salty, and sweet that defines true Thai cuisine." />
                <Grid :image="gridImg3"
                     text="Immerse yourself in the relaxed rhythm of island life, as our open-air terrace overlooks the limestone cliffs and turquoise waters, setting the stage for unforgettable sunsets and even more memorable meals at Siam Isle" />
-          </div>
-     </div>
+          </section>
+     </section>
 </template>
 
 <style scoped>

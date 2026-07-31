@@ -1,7 +1,7 @@
 <template>
-    <div class="floating-container" :style="positionStyle">
+    <section class="floating-container" :style="positionStyle">
         <img :src="currentImage" alt="Floating Graphic" class="floating-img" :class="{ 'flip-image': isFlipped }" />
-    </div>
+    </section>
 </template>
 
 <script setup>

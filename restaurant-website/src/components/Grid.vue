@@ -1,10 +1,10 @@
 <template>
      <img class="about-grid-img" :src="`${image}`" alt="restaurant image" />
-     <div class="about-grid-text">
+     <section class="about-grid-text">
           <p class="about-grid-text-p">
                {{ text }}
           </p>
-     </div>
+     </section>
 </template>
 
 <script setup>

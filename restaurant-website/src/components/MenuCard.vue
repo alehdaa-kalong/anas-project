@@ -1,8 +1,8 @@
 <template>
-    <div class="box">
+    <section class="box">
         <img :src="imgPath" alt="food img" />
         <p>{{ imgTitle }}</p>
-    </div>
+    </section>
 </template>
 
 <script setup>

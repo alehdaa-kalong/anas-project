@@ -3,31 +3,31 @@
 
 <template>
      <footer class="footer">
-          <div class="footer-content" id="contact">
+          <section class="footer-content" id="contact">
                <!-- Address & Contact -->
-               <div class="footer-section address-section">
+               <section class="footer-section address-section">
                     <p>133 Phet Kasem Rd, Nuea Khlong, Nuea Khlong District, Krabi 81130</p>
-                    <div class="email-container">
+                    <section class="email-container">
                          <img src="@/assets/images/Icon/email-icon.png" alt="email icon" class="email-icon">
                          <a href="mailto:siym2024island@gmail.com" class="email-link">siym2024island@gmail.com</a>
-                    </div>
-               </div>
+                    </section>
+               </section>
 
                <!-- Operating Hours -->
-               <div class="footer-section hours-section">
-                    <div class="hours-block">
+               <section class="footer-section hours-section">
+                    <section class="hours-block">
                          <span class="day-title">Monday - Friday</span>
                          <span class="time">10am - 9pm</span>
-                    </div>
-                    <div class="hours-block">
+                    </section>
+                    <section class="hours-block">
                          <span class="day-title">Saturday & Sunday</span>
                          <span class="time">10 am - 10 pm</span>
-                    </div>
-               </div>
-          </div>
+                    </section>
+               </section>
+          </section>
 
           <!-- Social Icons -->
-          <div class="social-icons">
+          <section class="social-icons">
                <!-- YouTube -->
                <a href="https://www.youtube.com/@SiyaM.2024" target="_blank" rel="noopener noreferrer">
                     <img src="@/assets/images/Icon/Youtube-icon.png" alt="YouTube">
@@ -47,7 +47,7 @@
                <a href="https://www.tiktok.com/@siyam_2024" target="_blank" rel="noopener noreferrer">
                     <img src="@/assets/images/Icon/TikTok-icon.png" alt="TikTok">
                </a>
-          </div>
+          </section>
      </footer>
 </template>
 

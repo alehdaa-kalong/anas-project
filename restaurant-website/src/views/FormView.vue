@@ -1,53 +1,53 @@
 <template>
     <main>
-        <div class="heading">
+        <section class="heading">
             <img :src="logo" alt="logo" width="100" class="shadow-img" />
             <h1>Book a Table</h1>
             <p class="subtitle">Reserve your dining experience with us</p>
-        </div>
+        </section>
 
         <form @submit.prevent="validateForm">
-            <div class="form-grid">
+            <section class="form-grid">
 
                 <!-- Personal Information -->
-                <div class="form-section">
+                <section class="form-section">
                     <h2 class="section-title">Personal Details</h2>
-                    <div class="form-row">
+                    <section class="form-row">
                         <label for="name" class="form-label">
                             <span class="label-text">Full Name</span>
                             <input type="text" v-model="name" id="name" placeholder="Enter your full name" required />
                             <span class="hint">Your reservation will be under this name</span>
                         </label>
-                    </div>
-                    <div class="form-row">
+                    </section>
+                    <section class="form-row">
                         <label for="email" class="form-label">
                             <span class="label-text">Email Address</span>
                             <input type="email" v-model="email" id="email" placeholder="your.email@example.com"
                                 required />
                             <span class="hint">We'll send confirmation to this email</span>
                         </label>
-                    </div>
-                    <div class="form-row">
+                    </section>
+                    <section class="form-row">
                         <label for="number" class="form-label">
                             <span class="label-text">Phone Number</span>
                             <input type="tel" v-model="phoneNumber" id="number"
                                 placeholder="Enter 10-digit phone number" required pattern="[0-9]{10}" />
                             <span class="hint">We'll contact you for reservation confirmation</span>
                         </label>
-                    </div>
-                </div>
+                    </section>
+                </section>
 
                 <!-- Reservation Details -->
-                <div class="form-section">
+                <section class="form-section">
                     <h2 class="section-title">Reservation Details</h2>
-                    <div class="form-row">
+                    <section class="form-row">
                         <label for="date" class="form-label">
                             <span class="label-text">Date</span>
                             <input type="date" v-model="date" id="date" required />
                             <span class="hint">Select your preferred date</span>
                         </label>
-                    </div>
-                    <div class="form-row">
+                    </section>
+                    <section class="form-row">
                         <label for="meal-type" class="form-label">
                             <span class="label-text">Meal Time</span>
                             <select v-model="mealType" id="meal-type" required>
@@ -58,21 +58,21 @@
                             </select>
                             <span class="hint">Choose when you'd like to dine</span>
                         </label>
-                    </div>
-                    <div class="form-row">
+                    </section>
+                    <section class="form-row">
                         <label for="guests" class="form-label">
                             <span class="label-text">Number of Guests</span>
                             <input type="number" v-model="guests" id="guests" placeholder="1-25 guests" required min="1"
                                 max="25" />
                             <span class="hint">Maximum 25 guests per reservation</span>
                         </label>
-                    </div>
-                </div>
+                    </section>
+                </section>
 
                 <!-- Special Requests -->
-                <div class="form-section full-width">
+                <section class="form-section full-width">
                     <h2 class="section-title">Special Requests</h2>
-                    <div class="form-row">
+                    <section class="form-row">
                         <label for="occasion" class="form-label">
                             <span class="label-text">Occasion</span>
                             <select v-model="occasion" id="occasion">
@@ -86,8 +86,8 @@
                             </select>
                             <span class="hint">Let us know if you're celebrating something special</span>
                         </label>
-                    </div>
-                    <div class="form-row">
+                    </section>
+                    <section class="form-row">
                         <label for="preferences" class="form-label">
                             <span class="label-text">Dietary Preferences</span>
                             <select v-model="dietaryPreference" id="preferences">
@@ -102,8 +102,8 @@
                             </select>
                             <span class="hint">We cater to various dietary needs</span>
                         </label>
-                    </div>
-                    <div class="form-row">
+                    </section>
+                    <section class="form-row">
                         <label for="seating" class="form-label">
                             <span class="label-text">Seating Preference</span>
                             <select v-model="seatingPreference" id="seating">
@@ -116,34 +116,34 @@
                             </select>
                             <span class="hint">We'll accommodate your preference if available</span>
                         </label>
-                    </div>
-                    <div class="form-row">
+                    </section>
+                    <section class="form-row">
                         <label for="addinfo" class="form-label">
                             <span class="label-text">Additional Information</span>
                             <textarea v-model="additionalInfo" id="addinfo" cols="30" rows="4"
                                 placeholder="Special requests, allergies, accessibility needs, or any other details..."></textarea>
                             <span class="hint">Let us know how we can make your experience memorable</span>
                         </label>
-                    </div>
-                </div>
-            </div>
+                    </section>
+                </section>
+            </section>
 
             <!-- Verification and Submit -->
-            <div class="form2">
-                <div class="verification-section">
+            <section class="form2">
+                <section class="verification-section">
                     <p class="verify-text">Please verify you're human</p>
-                    <div class="valid-container">
+                    <section class="valid-container">
                         <span>{{ num1 }}</span>
                         <span class="operator">+</span>
                         <span>{{ num2 }}</span>
                         <span class="equals">=</span>
                         <input v-model="answer" id="ans" type="text" placeholder="?" required />
-                    </div>
+                    </section>
                     <span class="hint">Enter the sum to confirm your reservation</span>
-                </div>
+                </section>
                 <button id="submit" type="submit" class="submit-btn">Complete Reservation</button>
                 <p class="footer-note">We look forward to serving you!</p>
-            </div>
+            </section>
         </form>
     </main>
 </template>

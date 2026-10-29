@@ -9,12 +9,71 @@
                 <p id="address">133 Phet Kasem Rd, Nuea Khlong, Nuea Khlong District, Krabi 81130 <br>
                 </p>
                 <a href="mailto:siym2024island@gmail.com">Email : siym2024island@gmail.com</a>
+                <p class="thailand-time">
+                    <strong>Thailand time:</strong><br>
+                    <span v-if="thailandTime">{{ formattedThailandTime }}</span>
+                    <span v-else-if="timeError">Time is currently unavailable.</span>
+                    <span v-else>Loading...</span>
+                </p>
             </section>
         </section>
     </section>
 </template>
 
-<script setup></script>
+<script setup>
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
+
+const thailandTime = ref(null);
+const timeError = ref(false);
+let clockInterval;
+let refreshInterval;
+
+const formattedThailandTime = computed(() => {
+    if (thailandTime.value === null) return '';
+
+    return new Intl.DateTimeFormat('en-GB', {
+        timeZone: 'Asia/Bangkok',
+        dateStyle: 'medium',
+        timeStyle: 'medium',
+    }).format(thailandTime.value);
+});
+
+const fetchThailandTime = async () => {
+    try {
+        const response = await fetch('https://worldtimeapi.org/api/timezone/Asia/Bangkok');
+        if (!response.ok) {
+            throw new Error(`WorldTimeAPI returned ${response.status}`);
+        }
+
+        const data = await response.json();
+        const time = new Date(data.datetime);
+        if (Number.isNaN(time.getTime())) {
+            throw new Error('WorldTimeAPI returned an invalid time');
+        }
+
+        thailandTime.value = time;
+        timeError.value = false;
+    } catch (error) {
+        console.error('Failed to load Thailand time:', error);
+        timeError.value = true;
+    }
+};
+
+onMounted(() => {
+    fetchThailandTime();
+    clockInterval = setInterval(() => {
+        if (thailandTime.value !== null) {
+            thailandTime.value = new Date(thailandTime.value.getTime() + 1000);
+        }
+    }, 1000);
+    refreshInterval = setInterval(fetchThailandTime, 300000);
+});
+
+onBeforeUnmount(() => {
+    clearInterval(clockInterval);
+    clearInterval(refreshInterval);
+});
+</script>
 
 <style lang="css" scoped>
 .contact-container {
